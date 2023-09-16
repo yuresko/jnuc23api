@@ -11,6 +11,9 @@
 # returned and if it looks familiar to the GUI.
 
 
+####################################################################################################################
+####################################################################################################################
+
 
 #GET /mobiledevices/id/___
 /usr/bin/curl -sku "username:password" https://instance.jamfcloud.com/JSSResource/mobiledevices/id/1
@@ -20,6 +23,9 @@
 # Update the name of a policy via the GUI. Verify the name took place via API.
 
 
+####################################################################################################################
+####################################################################################################################
+
 
 #GET - Retrieve Serial Number of /mobiledevices/id/___
 /usr/bin/curl -sku "username:password" https://instance.jamfcloud.com/JSSResource/mobiledevices/id/1 | xmllint --xpath '/mobile_device/general/serial_number/text()' - 2>/dev/null
@@ -27,6 +33,9 @@
 #### TASK ####
 # Retrieve only the name of the policy you updated in the previous task.
 
+
+####################################################################################################################
+####################################################################################################################
 
 
 #PUT - Update Asset Tag for /mobiledevices/id/___
