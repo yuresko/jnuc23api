@@ -16,7 +16,7 @@
 
 
 #GET /mobiledevices/id/___
-/usr/bin/curl -sku "username:password" https://instance.jamfcloud.com/JSSResource/mobiledevices/id/1
+/usr/bin/curl -sku "username:password" https://instance.jamfcloud.com/JSSResource/mobiledevices/id/8
 
 #### TASK ####
 # Try additional endpoints with alternate IDs.
@@ -28,7 +28,7 @@
 
 
 #GET - Retrieve Serial Number of /mobiledevices/id/___
-/usr/bin/curl -sku "username:password" https://instance.jamfcloud.com/JSSResource/mobiledevices/id/1 | xmllint --xpath '/mobile_device/general/serial_number/text()' - 2>/dev/null
+/usr/bin/curl -sku "username:password" https://instance.jamfcloud.com/JSSResource/mobiledevices/id/8 | xmllint --xpath '/mobile_device/general/serial_number/text()' - 2>/dev/null
 
 #### TASK ####
 # Retrieve only the name of the policy you updated in the previous task.
@@ -39,7 +39,7 @@
 
 
 #PUT - Update Asset Tag for /mobiledevices/id/___
-/usr/bin/curl -sku "username:password" https://instance.jamfcloud.com/JSSResource/mobiledevices/id/1 -H "Content-type: application/xml" -X PUT -d "<mobile_device><general><asset_tag>ASSETTAG</asset_tag></general></mobile_device>"
+/usr/bin/curl -sku "username:password" https://instance.jamfcloud.com/JSSResource/mobiledevices/id/8 -H "Content-type: application/xml" -X PUT -d "<mobile_device><general><asset_tag>ASSETTAG</asset_tag></general></mobile_device>"
 
 #### TASK ####
 # Assign an asset tag to a computer of your choice via API.
